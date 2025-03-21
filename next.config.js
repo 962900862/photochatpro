@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
-  basePath: process.env.NODE_ENV === 'production' ? '/photochatpro' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/photochatpro/' : '',
+  basePath: '',
+  assetPrefix: '',
   trailingSlash: true,
-  distDir: 'dist',
+  distDir: 'out',
   generateBuildId: async () => 'build',
+  output: 'export',
 };
 
 module.exports = nextConfig;
